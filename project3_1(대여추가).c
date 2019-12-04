@@ -64,7 +64,7 @@ void rentVideo(VideoInfo videoList[], int videoCount, RentInfo rentList[], int *
 	strcpy(rentList[*rentCount].title, title);
 	*rentCount += 1;
 	
-	for (i = 0; i < videoCount; i++)
+	for (i = 0; i < videoCount; i++)		//int indexSearched = searchVideoByTitle(videoList, videoCount, title); 사용
 		if (strcmp(videoList[i].title, title) == 0){
 			videoList[i].qty -= 1;
 			break;
